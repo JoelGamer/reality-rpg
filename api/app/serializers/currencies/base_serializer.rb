@@ -1,7 +1,11 @@
-class Currencies::BaseSerializer < ActiveModel::Serializer
-  attributes :id, :name, :abbreviation, :symbol, :conversions
+# frozen_string_literal: true
 
-  def conversions
-    Currencies::LoadConversions.new(object).call
+module Currencies
+  class BaseSerializer < ActiveModel::Serializer
+    attributes :id, :name, :abbreviation, :symbol, :conversions
+
+    def conversions
+      Currencies::LoadConversions.new(object).call
+    end
   end
 end

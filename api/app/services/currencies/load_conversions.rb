@@ -1,17 +1,22 @@
-class Currencies::LoadConversions
-  attr_reader :currency
-  
-  def initialize(currency)
-    @currency = currency
-  end
+# frozen_string_literal: true
 
-  def call
-    load_conversions
-  end
+module Currencies
+  class LoadConversions
+    attr_reader :currency
 
-  private
+    def initialize(currency)
+      @currency = currency
+    end
 
-  def load_conversions
-    [Currencies::Conversion.find_by(from_currency: @currency), Currencies::Conversion.find_by(to_currency: @currency)].flatten.compact
+    def call
+      load_conversions
+    end
+
+    private
+
+    def load_conversions
+      [Currencies::Conversion.find_by(from_currency: @currency),
+       Currencies::Conversion.find_by(to_currency: @currency)].flatten.compact
+    end
   end
 end

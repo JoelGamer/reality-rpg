@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CurrenciesController < ApplicationController
   before_action :set_currency, only: %i[show update destroy]
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateLocationsBases < ActiveRecord::Migration[6.1]
   def change
     create_table :locations_bases do |t|
