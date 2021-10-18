@@ -7,3 +7,16 @@ For now, I'm just going to use this project for developing my skills, using what
 some sort of a clean code, not just going to paste whatever thing that I see throughout the internet, I'll keep it clean, for those o wish to adventure on this code.
 
 Enough rambling, let's get coding!
+
+Roadmap (?)
+
+- [ ] Currency/Currencies
+- [ ] Location
+- [ ] City
+- [ ] Item
+- [ ] Consumables
+- [ ] Food/Foods
+.
+.
+.
+- [ ] TBA!
