@@ -9,5 +9,9 @@ module Items
 
     validates :name, presence: true, uniqueness: true
     validates :weight, :height, :width, :lenght, presence: true
+
+    def storage_units
+      weight * ((height + width + lenght) / 3)
+    end
   end
 end

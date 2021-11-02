@@ -4,7 +4,7 @@ module Consumable
   extend ActiveSupport::Concern
 
   included do
-    has_one :consumable, class_name: 'Item::Consumable::Base', as: :consumable, dependent: :destroy
+    has_one :consumable, class_name: 'Items::Consumables::Base', as: :consumable, dependent: :destroy
   end
 
   delegate :name, :rarity, :weight, :height, :width, :lenght, to: :lazily_built_consumable
